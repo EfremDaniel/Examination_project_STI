@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools >= 68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "Player-stats"
+version = "2025.10.25"
+dependencies = [
+"dlt",
+"dbt",
+"ipykernel",
+"dagster",
+"plotly",
+"taipy",
+"pandas",
+"Duckdb"]
+authors = [{name = "Marcus"}, {name = "Efrem"}]
+description = "Creating pipeline, ingested data from a API and transform and testing. With dagster make it automation and last loaded to a database"
+readme = "README.md"
+requires-python = "<= 3.12.8"
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dashboard*", "data_extract_load*", "orchestration*"]
+exclude = ["data_transformation*", "data_warehouse*", "explorations*"]
