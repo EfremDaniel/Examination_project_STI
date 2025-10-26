@@ -22,6 +22,6 @@ requires-python = "<= 3.12.8"
 
 
 [tool.setuptools.packages.find]
-where = ["."]
+where = ["src"]
 include = ["dashboard*", "data_extract_load*", "orchestration*"]
 exclude = ["data_transformation*", "data_warehouse*", "explorations*"]
